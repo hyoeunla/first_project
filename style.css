@@ -1,0 +1,245 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.line {
+    width: 250px;
+    height: 3px;
+    background: #000000;
+    margin: 0px;
+}
+
+.line1 {
+    width: 400px;
+    height: 3px;
+    background: #000000;
+    margin-left: 500px;
+}
+
+.nav{
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+a{
+    color: inherit;
+}
+
+.bg{
+    background-image: url('./image/bg.jpg');
+    background-size: 100% 686px;
+    background-repeat: no-repeat;
+    margin-top: -120px;
+
+}
+/* 보여줄 구간의 높이와 넓이 설정 */ 
+#slideShow{ 
+    width: 1050px; 
+    height: 686px; 
+    position: relative; 
+    margin: 120px auto;
+    overflow: hidden;
+    /* 리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨 */
+}
+.slides{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2500px; 
+    /* 슬라이드할 사진과 마진 총 넓이 */
+    transition: left 0.5s ease-out;
+    /* ease-out: 처음에는 느렸다가 점점 빨라짐 */
+} 
+    
+    /* 첫 번째 슬라이드 가운데에 정렬하기위해 첫번째 슬라이드만 margin-left조정 */ 
+.slides li:first-child{
+    margin-left: 0px;
+} 
+    
+    /* 슬라이드들 옆으로 정렬 */ 
+.slides li:not(:last-child){
+    float: left; margin-right: 100px;
+} 
+
+.slides li{
+    float: left;
+} 
+
+.controller span{
+    position:absolute;
+    background-color: rgba(124, 124, 124, 0.459);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 50%;
+    font-size: 1.3em;
+    cursor: pointer;
+} 
+    
+    /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */ 
+.controller span:hover{
+    background-color: rgba(124, 124, 124, 0.459);
+} 
+
+.prev{
+    left: 10px;
+} 
+    
+    /* 이전 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 왼쪽으로 이동하는 효과 */
+.prev:hover{
+    transform: translateX(-10px);
+}
+
+.next{
+    right: 10px;
+} 
+/* 다음 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 오른쪽으로 이동하는 효과 */
+.next:hover{
+    transform: translateX(10px);
+}
+
+.title{
+    text-align: center;
+    margin-top: -100px;
+}
+
+.information{
+    width:1280px;
+    display: flex;
+    margin: 30px auto;
+    height: 320px;
+}
+
+.contents {
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+.Teams{
+    width:1280px;
+    margin: 70px auto;
+}
+
+.container{
+    width: 1400px;
+    height: 700px;
+    margin-top: 20px;
+    display: flex;
+    background-image: url('./image/inbg.jpg');
+}
+
+.letter{
+    width: 700px;
+    height: 120px;
+    text-align: center;
+    margin-top: 240px;
+}
+
+.letter > h1, p {
+    margin-top: 5px;
+    color: white;
+}
+
+.more{
+    width:100px;
+    height: 30px;
+    background: #797979;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.contents_box{
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex: 1;
+}
+
+.small_box{
+    width: 700px;
+    height: 350px;
+    display: flex;
+}
+
+.small_box1{
+    margin-top: 350px;
+    margin-left: -700px;
+    width: 700px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(48, 64, 107);
+}
+
+.Players{
+    width: 1400px;
+    height: 770px;
+    margin-top: 55px;
+}
+
+.player_con{
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+   
+}
+
+.letter1{
+    display: flex;
+    text-align: center;
+    margin-left: -35px;
+    justify-content: space-around;
+}
+
+.letter2{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.letter2 > h3{
+    margin-top: -50px;
+    text-align: center;
+}
+
+.ctn {
+    position: absolute;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #797979;
+    border-radius: 30px;
+    color: whitesmoke;
+    margin-left: 650px;
+}
